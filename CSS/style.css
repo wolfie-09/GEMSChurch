@@ -1,0 +1,458 @@
+*, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+body {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    background-color: #e5e5e5;
+    color: #000;
+}
+/*
+  ========================================
+  Header
+  ========================================
+*/
+#header-top {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+#header-top.is-scrolled {
+    background-color: #3f3f3f;
+}
+#header-top-container {
+    width: 88%;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 1.875em 0;
+    opacity: 1;
+    transition: all .2s ease-in;
+}
+#header-top-container.is-scrolled {
+    padding: 0;
+}
+#header-top-container.is-scrolled img {
+    height: 50px;
+}
+#header-top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#logo img {
+    height: 50px;
+    opacity: 1;
+}
+
+#header-menu {
+    align-self: center;
+}
+#header-menu-content {
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+}
+
+
+/* Nav */
+.menu-item,
+.sub-menu-item{
+    font-size: .85rem;
+    color: white;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    position: relative;
+    right: 0;
+}
+#mobile-menu .bar{
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    transition: all .3s ease-in-out;
+    background: white;
+    display: block;
+}
+
+#header-menu-content {
+    display: none;
+    gap: .5rem;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    top: 75%;
+    border-radius: 5px;
+    right: 5%;
+    padding: .7em;
+    width: 200px;
+    flex-direction: column;
+}
+
+#sub-menu a{
+    color: #185e18;
+    position: relative;
+    left: 1rem;
+}
+#header-menu-content a:hover,
+#sub-menu a:hover {
+    color: royalblue;
+}
+.menu-item {
+    color: #185e18;
+}
+
+#mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+}
+#mobile-menu.is-active .bar:first-child {
+    transform: translateY(5px) rotate(45deg);
+}
+#mobile-menu.is-active .bar:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+#header-menu-content.active {
+    display: flex;
+}
+/*
+  ========================================
+  Sections
+  ========================================
+*/
+.home-section {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.home-section-content {
+    padding: 0 2em;
+    max-width: 980px;
+}
+
+.home-section-content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 1.640625rem 0;
+    line-height: 1.4;
+}
+.section-title {
+    font-family: Caudex, Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.home-section-inner {
+    display: table-cell;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.home-section-image {
+    position: absolute;
+    top: 0;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+/* Common Styles */
+#home-section-1 > *,
+#home-section-3 > *,
+#home-section-5 > * {
+    color: white;
+}
+#home-section-1 a,
+#home-section-3 a,
+#home-section-5 a {
+    color: white;
+}
+
+#home-section-4 li {
+    border: black 1px solid;
+}
+
+#home-section-4 li:hover {
+    background-color: black;
+    color: white;
+}
+
+#home-section-4 a{
+    color: black;
+}
+
+#home-section-4 li:hover a{
+    color: white;
+}
+
+/* ul content */
+.circle-button-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.circle-button-list li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.625rem;
+    height: 4.625rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.circle-button-list li:hover {
+    background-color: white;
+}
+#home-section-1 li:hover a,
+#home-section-3 li:hover a,
+#home-section-5 li:hover a {
+    color: black;
+}
+
+.circle-button-list a {
+    font-size: .75rem;
+}
+
+/* Section 1 - Hero */
+
+.hero-logo {
+    width: 35%;
+}
+
+#home-section-1 .home-section-image {
+    background: url(../Images/home_homebayridge.jpg) center top / cover no-repeat;
+    background-color: rgba(0,0,0,.7);
+}
+/* Map Section */
+.home-section.home-section-map {
+    min-height: fit-content;
+}
+
+.section-inner-map,
+.section-content-map {
+    width: 100%;
+    padding: 0;
+}
+.section-content-map {
+    max-width: none;
+}
+.section-content-map iframe {
+    width: 100%;
+    height: 50vh;
+}
+
+/* Section 3 */
+#home-section-3 .home-section-image{
+    opacity: .8;
+    background: url(../Images/home_childrenchurch.jpg) center center / cover no-repeat;
+    background-color: rgba(0,0,0,.7);
+}
+
+/* Section 4 */
+#home-section-4 .home-section-image{
+    opacity: .7;
+    background: url(../Images/home_digitalsermons.jpg) center center / cover no-repeat;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+/* Section 5 */
+#home-section-5 .home-section-image{
+    opacity: .7;
+    background: url(../Images/home_adultbiblestudy.jpg) center center / cover no-repeat;
+    /* background-color: rgba(255, 255, 255, .9); */
+    background-color: rgba(0,0,0,.7);
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #3f3f3f;
+    padding: 3rem 0;
+}
+
+.social-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    font-size: 1.6rem;
+    color: white;
+}
+.social-icon:hover {
+    color: royalblue;
+}
+.icon-insta:hover {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-yt:hover {
+    color: crimson;
+}
+.footer-notice {
+    font-size: 0.68rem;
+    color: white;
+}
+
+/*
+  ========================================
+  Responsive Website
+  ========================================
+*/
+@media screen and (min-width: 700px) {
+    #logo img {
+        height: 75px;
+    }
+    #mobile-menu {
+        display: none;
+    }
+    #header-menu-content {
+        display: flex;
+        gap: 2.5rem;
+        position: initial;
+        text-align: unset;
+        background-color: transparent;
+        top: 70%;
+        border-radius: 5px;
+        right: 0;
+        padding: 0;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .header-submenu-content {
+        position: absolute;
+        margin-top: .1rem;
+        margin-left: -1rem;
+        border-radius: 5px;
+        background-color: white;
+        padding: .5rem;
+        width: 175px;
+        display: none;
+        flex-direction: column;
+        gap: .2rem;
+    }
+    #sub-menu a{
+        left: 0;
+        font-size: .9rem;
+    }
+    .menu-item {
+        color: white;
+        font-size: 1rem;
+    }
+    #header-menu-content a:hover {
+        color: turquoise;
+    }
+    #sub-menu a:hover {
+        color: royalblue;
+    }
+    
+    .hover-submenu:hover .header-submenu-content {
+        display: flex;
+    }
+
+    /* Button */
+    .circle-button-list li {
+        width: 6rem;
+        height: 6rem;
+    }
+    .circle-button-list a {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    .hero-logo {
+        margin-top: 8rem;
+    }
+    .home-section-content p {
+        font-size: 1.45rem;
+    }
+    .section-title {
+        font-size: 3rem;
+    }
+    /* Footer */
+    #footer {
+        padding: 5rem 0;
+        gap: 2.5rem;
+    }
+    .social-icon {
+        font-size: 2.25rem;
+    }
+    .footer-notice {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .home-section-content p {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 3.6rem;
+    }
+    .hero-logo {
+        margin-top: 5rem;
+    }
+    /* Button */
+    .circle-button-list li {
+        width: 7.25rem;
+        height: 7.25rem;
+    }
+    .circle-button-list a {
+        font-size: 1.1rem;
+    }
+    #footer {
+        gap: 3rem;
+    }
+    .footer-notice {
+        font-size: .9rem;
+    }
+}

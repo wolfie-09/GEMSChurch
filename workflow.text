@@ -1,0 +1,27 @@
+body
+    header #header
+        div #header-top
+            div
+                div #header-top-container
+                    div #header-top-inner
+                        div #logo
+                            img logo
+                        div #header-menu
+                            nav #header-menu-inner
+                                ul #header-menu-content
+                                    li .menu-item
+                                        ul #sub-menu-content
+                                            li .sub-menu-item
+    main #home-main
+        section .home-section
+            div .home-section-img (bg including top)
+            div .home-section-inner
+                div.home-section-content
+                    img logo
+                    p
+                    ul circle-button-list
+                        li a
+                        li a
+    footer #footer
+        
+

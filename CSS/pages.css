@@ -1,0 +1,245 @@
+/*  Header */
+#header-top-container {
+    padding: 1em 0;
+}
+#logo img {
+    height: 40px;
+}
+
+.page-banner {
+    height: 22.5vh;
+    min-height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+
+.page-banner-image {
+    position: absolute;
+    top: 0;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.welcome-page {
+    background: url(../Images/home_homebayridge.jpg) center top / cover no-repeat;
+    background-color: rgba(0,0,0,.7);
+}
+.what-to-expect-page {
+    background: url(../Images/what-to-expect.jpg) center bottom / cover no-repeat;
+    background-color: rgba(0,0,0,.7);
+}
+.statement-page {
+    background: url(../Images/statement-of-faith.jpg) center center / cover no-repeat;
+    background-color: rgba(0,0,0,.7);
+}
+
+#header .section-title {
+    color: white;
+    margin-bottom: 40%;
+}
+#header .sub-page-title {
+    margin-bottom: 25%;
+}
+.page-section-title {
+    font-family: Caudex, Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif;
+    font-size: 1.6rem;
+    /* font-weight: 700; */
+}
+/* Main */
+.page-content-container {
+    margin-top: 5rem;
+    margin-bottom: 4.6875rem;
+    padding: 0 5% 0 6%;
+}
+
+.page-content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.page-content-inner p {
+    font-size: .9rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.page-content-inner h2 {
+    font-family: Caudex, Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif;
+    font-size: 1.748rem;
+}
+
+.page-content-inner h3 {
+    font-family: Caudex, Georgia, "Bitstream Vera Serif", "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+}
+/* Daily verses */
+.daily-verses {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.daily-verses .verse {
+    text-align: center;
+}
+.daily-verses .reference {
+    font-size: .8em;
+    text-align: right;
+    font-weight: 600;
+}
+/* sermons & Media */
+.sermons-page {
+    background-color: hsl(255deg 40% 99%);
+}
+.sermons-page .page-content-inner {
+    gap: 3rem;
+}
+
+.yt-playlist-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.playlist {
+    padding: 1rem;
+    width: 75%;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+}
+.playlist img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    position: relative;
+    top: -2rem;
+    border-radius: 1em;
+}
+.playlist a {
+    color: blue;
+}
+.playlist a:hover {
+    color: red;
+}
+.playlist img {
+    height: 150px;
+}
+
+
+@media screen and (min-width:700px) {
+    #header-top-container {
+        padding: 1.875em 0;
+    }
+    #logo img {
+        height: 60px;
+    }
+    .page-banner {
+        height: 40vh;
+    }
+    #header .section-title {
+        margin-bottom: 30%;
+    }
+    #header .sub-page-title {
+        margin-bottom: 20%;
+    }
+    .page-content-inner {
+        gap: 2em;
+    }
+    .page-content-inner p {
+        font-size: 1.05rem;
+    }
+    .page-content-inner h2 {
+        font-size: 1.748rem;
+    }
+    .page-content-inner h3 {
+        font-size: 1.4375rem;
+    }
+    .daily-verses .reference {
+        font-size: .9em;
+    }
+
+    /* Sermons */
+    .sermons-page .page-content-inner {
+        gap: 5rem;
+    }
+    .yt-playlist-container {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .playlist {
+        width: unset;
+        margin-bottom: 1rem;
+    }
+    .playlist img {
+        height: 150px;
+    }
+}
+@media screen and (min-width:850px){
+    .page-content-inner h2 {
+        font-size: 2rem;
+    }
+    .page-content-inner h3 {
+        font-size: 1.656rem;
+    }
+
+    .yt-playlist-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1020px) {
+    .page-banner {
+        max-height: 400px;
+        height: 47.5vh;
+    }
+    #header .section-title {
+        margin-bottom: 35%;
+    }
+    #header .sub-page-title {
+        margin-bottom: 20%;
+    }
+    .page-content-inner p {
+        font-size: 1.15rem;
+    }
+    .page-content-inner h2 {
+        font-size: 2.285rem;
+    }
+    .page-content-inner h3 {
+        font-size: 1.84rem;
+    }
+    .daily-verses .reference {
+        font-size: 1rem;
+    }
+
+    /* Sermons */
+    .playlist {
+        margin-bottom: 2rem;
+    }
+    .playlist img {
+        height: 175px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .page-banner {
+        height: 55vh;
+    }
+    #header .section-title {
+        margin-bottom: 50%;
+    }
+    #header .sub-page-title {
+        margin-bottom: 25%;
+    }
+}
